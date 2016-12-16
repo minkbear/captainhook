@@ -15,7 +15,6 @@ class CaptainHookSetupLogsTable extends Migration
         Schema::create('webhook_logs', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('webhook_id')->unsigned()->nullable();
-            $table->foreign('webhook_id')->references('id')->on('webhooks')->onDelete('set null');
             $table->string('url');
             $table->string('payload_format')->nullable();
             $table->text('payload');
@@ -23,6 +22,10 @@ class CaptainHookSetupLogsTable extends Migration
             $table->text('response');
             $table->string('response_format')->nullable();
             $table->timestamps();
+        });
+
+        Schema::table('webhook_logs', function ($table) {
+            $table->foreign('webhook_id')->references('id')->on('webhooks')->onDelete('set null');
         });
     }
 
