@@ -205,9 +205,7 @@ class CaptainHookServiceProvider extends ServiceProvider
      */
     public function handleEvent($eventData)
     {
-        $eventName = Event::firing();
-        $webhooks = $this->getWebhooks()->where('event', $eventName);
-        $webhooks = $webhooks->filter($this->config->get('captain_hook.filter', null));
+        $webhooks = $this->getWebhooks()->filter($this->config->get('captain_hook.filter', null));
 
         if (! $webhooks->isEmpty()) {
             $this->dispatch(new TriggerWebhooksJob($webhooks, $eventData));
