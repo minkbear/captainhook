@@ -1,5 +1,5 @@
 {
-    "name": "surveyanyplace/captainhook",
+    "name": "minkbear/captainhook",
     "license": "MIT",
     "description": "Add webhooks to your Laravel app.",
     "keywords": [
@@ -9,16 +9,16 @@
         "webhook",
         "webhooks"
     ],
-    "homepage": "http://github.com/surveyanyplace/captainhook",
+    "homepage": "http://github.com/minkbear/captainhook",
     "authors": [
         {
-            "name": "Marcel Pociot",
-            "email": "m.pociot@gmail.com"
+            "name": "minkbear",
+            "email": "minkbear@gmail.com"
         }
     ],
     "support": {
-        "issues": "https://github.com/surveyanyplace/captainhook/issues",
-        "source": "https://github.com/surveyanyplace/captainhook"
+        "issues": "https://github.com/minkbear/captainhook/issues",
+        "source": "https://github.com/minkbear/captainhook"
     },
     "require": {
         "php": ">=5.4.0",
