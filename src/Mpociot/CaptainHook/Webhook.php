@@ -33,7 +33,7 @@ class Webhook extends Eloquent
      */
     public static function boot()
     {
-        parent::boot();
+        //parent::boot();
 
         static::created(function ($results) {
             Cache::forget(self::CACHE_KEY);
