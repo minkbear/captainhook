@@ -36,5 +36,12 @@
         "psr-0": {
             "Mpociot\\CaptainHook": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mpociot\\CaptainHook\\CaptainHookServiceProvider"
+            ]
+        }
     }
 }
