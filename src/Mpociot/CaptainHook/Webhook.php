@@ -31,22 +31,22 @@ class Webhook extends Eloquent
      * Boot the model
      * Whenever a new Webhook get's created the cache get's cleared.
      */
-    public static function boot()
-    {
-        //parent::boot();
-
-        static::created(function ($results) {
-            Cache::forget(self::CACHE_KEY);
-        });
-
-        static::updated(function ($results) {
-            Cache::forget(self::CACHE_KEY);
-        });
-
-        static::deleted(function ($results) {
-            Cache::forget(self::CACHE_KEY);
-        });
-    }
+//    public static function boot()
+//    {
+//        //parent::boot();
+//
+//        static::created(function ($results) {
+//            Cache::forget(self::CACHE_KEY);
+//        });
+//
+//        static::updated(function ($results) {
+//            Cache::forget(self::CACHE_KEY);
+//        });
+//
+//        static::deleted(function ($results) {
+//            Cache::forget(self::CACHE_KEY);
+//        });
+//    }
 
     /**
      * Retrieve the logs for a given hook.
